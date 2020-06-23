@@ -8,24 +8,38 @@ public float ForwardsForce;
     public float SidewaysForce = 500f;
     public float ClimbForce;
     public float JumpForce;
+    public float SwimForce;
+    public float FlightForce;
     // public CharacterSelector CurrentPlayer;
     public Rigidbody rb;
     public Transform PlayerDirection;
     public bool CanJump;
     public bool CanClimb;
+    public bool Flying;
+    public bool Swimming;
     // Start is called before the first frame update
     void Start()
     {
         float SpeedMultiplier = PlayerPrefs.GetFloat("Speed");
         float JumpMultiplier = PlayerPrefs.GetFloat("JumpHeight");
         float ClimbMultiplier = PlayerPrefs.GetFloat("ClimbSpeed");
-        // ForwardsForce = 2000f*SpeedMultiplier;
-        // ClimbForce = 2000f*ClimbMultiplier;
-        // JumpForce = 40000f*JumpMultiplier;
-        ForwardsForce = 2000f;
-        ClimbForce = 2000f;
-        JumpForce = 40000f;
-        Debug.Log($"Run multiplier:{SpeedMultiplier} Climb multiplier:{ClimbMultiplier} Jump Multiplier:{JumpMultiplier}");
+        float SwimMultiplier = PlayerPrefs.GetFloat("SwimSpeed");
+        float FlightMultiplier = PlayerPrefs.GetFloat("FlightSpeed");
+        // If you're not using the main menu, have this next part commented out:
+        ForwardsForce = 2000f*SpeedMultiplier;
+        ClimbForce = 2000f*ClimbMultiplier;
+        JumpForce = 40000f*JumpMultiplier;
+        SwimForce = 2000f*SwimMultiplier;
+        FlightForce = 1000f*FlightMultiplier;
+        // If you're not using the main menu, have the part above commented out
+
+        // If you're using the main menu, comment out the next part:
+        // ForwardsForce = 2000f;
+        // ClimbForce = 2000f;
+        // JumpForce = 40000f;
+        // SwimForce = 2000f;
+        // FlightForce = 0;
+        // If you're using the main menu have the above part commented out
     }
 
     // Update is called once per frame
@@ -41,7 +55,18 @@ public float ForwardsForce;
         }
         if(Input.GetKey("w"))
         {
-            rb.AddForce(0, 0, ForwardsForce * Time.deltaTime);
+            // if(Swimming == true)
+            // {
+            //     rb.AddForce(0, 0, SwimForce * Time.deltaTime);
+            // }
+            // else if(Flying == true)
+            // {
+            //     rb.AddForce(0, 0, FlightForce * Time.deltaTime);
+            // }
+            // else
+            // {
+                rb.AddForce(0, 0, ForwardsForce * Time.deltaTime);
+            // }
         }
         if(Input.GetKey("e") && CanClimb == true)
         {
@@ -57,7 +82,6 @@ public float ForwardsForce;
         }
         if(Input.GetKey("space") && CanJump == true)
         {
-            Debug.Log(JumpForce);
             rb.AddForce(0, JumpForce * Time.deltaTime, 0);
         }
         if(rb.position.y < .8)
