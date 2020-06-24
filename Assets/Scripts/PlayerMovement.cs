@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
 public float ForwardsForce;
-    public float SidewaysForce = 500f;
+    public float SidewaysForce;
     public float ClimbForce;
     public float JumpForce;
     public float SwimForce;
@@ -27,6 +27,7 @@ public float ForwardsForce;
         float FlightMultiplier = PlayerPrefs.GetFloat("FlightSpeed");
         // If you're not using the main menu, have this next part commented out:
         ForwardsForce = 2000f*SpeedMultiplier;
+        SidewaysForce = 125f*SpeedMultiplier;
         ClimbForce = 2000f*ClimbMultiplier;
         JumpForce = 40000f*JumpMultiplier;
         SwimForce = 2000f*SwimMultiplier;
@@ -35,6 +36,7 @@ public float ForwardsForce;
 
         // If you're using the main menu, comment out the next part:
         // ForwardsForce = 2000f;
+        // SidewaysForce = 125f;
         // ClimbForce = 2000f;
         // JumpForce = 40000f;
         // SwimForce = 2000f;
@@ -55,8 +57,11 @@ public float ForwardsForce;
         }
         if(Input.GetKey("w"))
         {
+            Debug.Log(ForwardsForce);
+            Debug.Log(SwimForce);
             if(Swimming == true)
             {
+                Debug.Log($"You're swimming! Your Swim Multiplier is {SwimForce}");
                 rb.AddForce(0, 0, SwimForce * Time.deltaTime);
             }
             // else if(Flying == true)
@@ -65,6 +70,7 @@ public float ForwardsForce;
             // }
             else
             {
+                Debug.Log($"You're walking! Your Walk Multiplier is {ForwardsForce}");
                 rb.AddForce(0, 0, ForwardsForce * Time.deltaTime);
             }
         }
