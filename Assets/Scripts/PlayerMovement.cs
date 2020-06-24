@@ -55,18 +55,18 @@ public float ForwardsForce;
         }
         if(Input.GetKey("w"))
         {
-            // if(Swimming == true)
-            // {
-            //     rb.AddForce(0, 0, SwimForce * Time.deltaTime);
-            // }
+            if(Swimming == true)
+            {
+                rb.AddForce(0, 0, SwimForce * Time.deltaTime);
+            }
             // else if(Flying == true)
             // {
             //     rb.AddForce(0, 0, FlightForce * Time.deltaTime);
             // }
-            // else
-            // {
+            else
+            {
                 rb.AddForce(0, 0, ForwardsForce * Time.deltaTime);
-            // }
+            }
         }
         if(Input.GetKey("e") && CanClimb == true)
         {
@@ -78,7 +78,18 @@ public float ForwardsForce;
         }
         if(Input.GetKey("s") && CanJump == true)
         {
-            rb.AddForce(0, 0, -ForwardsForce * Time.deltaTime);
+            if(Swimming == true)
+            {
+                rb.AddForce(0, 0, -SwimForce * Time.deltaTime);
+            }
+            // else if(Flying == true)
+            // {
+            //     rb.AddForce(0, 0, FlightForce * Time.deltaTime);
+            // }
+            else
+            {
+                rb.AddForce(0, 0, -ForwardsForce * Time.deltaTime);
+            }
         }
         if(Input.GetKey("space") && CanJump == true)
         {

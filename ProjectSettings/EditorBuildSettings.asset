@@ -8,7 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/StartMenu.unity
     guid: 3be52e4e6aabc4343a245c2838a699bc
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/CartoonWater.unity
     guid: df02972862ee8aa40b2dff16b48a2825
+  - enabled: 1
+    path: Assets/Scenes/GeneratingTrack.unity
+    guid: a80d2cbed31b52d42b3dd8be8918982c
   m_configObjects: {}
