@@ -11,9 +11,13 @@ public class PlayerCollision : MonoBehaviour
             movement.enabled = false;
             FindObjectOfType<GameManager>().EndGame();
         }
-        else if(collisionInfo.collider.tag == "Ground")
+        if(collisionInfo.collider.tag == "Ground")
         {
             movement.CanJump = true;
+        }
+        if(collisionInfo.collider.tag == "Water")
+        {
+            movement.Swimming = true;
         }
         if(collisionInfo.collider.tag == "Wall")
         {
@@ -34,6 +38,10 @@ public class PlayerCollision : MonoBehaviour
         {
             movement.rb.useGravity = true;
             movement.CanClimb = false;
+        }
+        if(collisionInfo.collider.tag == "Water")
+        {
+            movement.Swimming = false;
         }
     }
     // Start is called before the first frame update
