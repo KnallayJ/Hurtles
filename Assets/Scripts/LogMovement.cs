@@ -5,7 +5,7 @@ using UnityEngine;
 public class LogMovement : MonoBehaviour, IPooledLog
 {
     
-    public float sideForce=1f;
+    public float sideForce=1000f;
     // Start is called before the first frame update
     public void OnLogSpawn()
     {
