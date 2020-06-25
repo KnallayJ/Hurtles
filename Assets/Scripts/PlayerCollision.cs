@@ -1,9 +1,11 @@
 ﻿
 using UnityEngine;
 
+
 public class PlayerCollision : MonoBehaviour
 {
     public PlayerMovement movement;
+    public Animator Animator;
     void OnCollisionEnter (Collision collisionInfo)
     {
         if(collisionInfo.collider.tag == "Obstacle")
@@ -11,9 +13,15 @@ public class PlayerCollision : MonoBehaviour
             movement.enabled = false;
             FindObjectOfType<GameManager>().EndGame();
         }
-        else if(collisionInfo.collider.tag == "Ground")
+        if(collisionInfo.collider.tag == "Ground")
         {
             movement.CanJump = true;
+        }
+        if(collisionInfo.collider.tag == "Water")
+        {
+            Debug.Log("You're Swimming!");
+            movement.Swimming = true;
+            Animator.SetBool("IsSwimming",true);
         }
         if(collisionInfo.collider.tag == "Wall")
         {
@@ -34,6 +42,11 @@ public class PlayerCollision : MonoBehaviour
         {
             movement.rb.useGravity = true;
             movement.CanClimb = false;
+        }
+        if(collisionInfo.collider.tag == "Water")
+        {
+            movement.Swimming = false;
+            Animator.SetBool("IsSwimming",false);
         }
     }
     // Start is called before the first frame update

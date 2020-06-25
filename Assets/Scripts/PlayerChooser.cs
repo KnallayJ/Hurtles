@@ -19,6 +19,7 @@ public class PlayerChooser : MonoBehaviour
         PlayerPrefs.SetFloat("ClimbSpeed", 0.5f);
         PlayerPrefs.SetFloat("SwimSpeed", 0.5f);
         PlayerPrefs.SetFloat("FlightSpeed", 0f);
+        PlayerPrefs.SetString("Character","Jumper");
         LoadLevel();
     }
     public void SetRunner()
@@ -28,6 +29,7 @@ public class PlayerChooser : MonoBehaviour
         PlayerPrefs.SetFloat("ClimbSpeed", 0.5f);
         PlayerPrefs.SetFloat("SwimSpeed", 0.5f);
         PlayerPrefs.SetFloat("FlightSpeed", 0f);
+        PlayerPrefs.SetString("Character","Runner");
         LoadLevel();
     }
     public void SetClimber()
@@ -37,6 +39,7 @@ public class PlayerChooser : MonoBehaviour
         PlayerPrefs.SetFloat("ClimbSpeed", 1.0f);
         PlayerPrefs.SetFloat("SwimSpeed", 0.5f);
         PlayerPrefs.SetFloat("FlightSpeed", 0f);
+        PlayerPrefs.SetString("Character","Climber");
         LoadLevel();
     }
     public void SetFlyer()
@@ -46,15 +49,17 @@ public class PlayerChooser : MonoBehaviour
         PlayerPrefs.SetFloat("ClimbSpeed", 0.5f);
         PlayerPrefs.SetFloat("SwimSpeed", 0.5f);
         PlayerPrefs.SetFloat("FlightSpeed", 1.0f);
+        PlayerPrefs.SetString("Character","Flyer");
         LoadLevel();
     }
     public void SetSwimmer()
     {
-        PlayerPrefs.SetFloat("Speed", 0.5f);
+        PlayerPrefs.SetFloat("Speed", 0.25f);
         PlayerPrefs.SetFloat("JumpHeight", 0.5f);
         PlayerPrefs.SetFloat("ClimbSpeed", 0.5f);
-        PlayerPrefs.SetFloat("SwimSpeed", 1.0f);
+        PlayerPrefs.SetFloat("SwimSpeed", 2.0f);
         PlayerPrefs.SetFloat("FlightSpeed", 0f);
+        PlayerPrefs.SetString("Character","Swimmer");
         LoadLevel();
     }
 }
