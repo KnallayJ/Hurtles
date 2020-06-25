@@ -101,7 +101,7 @@ public float ForwardsForce;
         {
             rb.AddForce(0, JumpForce * Time.deltaTime, 0);
         }
-        if(rb.position.y < .8)
+        if(rb.position.y < -5)
         {
             FindObjectOfType<GameManager>().EndGame();
         }
