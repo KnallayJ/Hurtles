@@ -58,7 +58,7 @@ public class TrackManager : MonoBehaviour
 
     public void SpawnTrack()
     {
-        int randomIndex = Random.Range(0, 6);
+        int randomIndex = Random.Range(0, 8);
 
         currentTrack = (GameObject)Instantiate(trackPrefabs[randomIndex], currentTrack.transform.GetChild(0).position, Quaternion.identity);
     }

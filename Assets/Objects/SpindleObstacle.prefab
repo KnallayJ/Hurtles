@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 3568927951925987703, guid: 35e89c6f457fe524aa88cd2cc0e3c525,
         type: 3}
       propertyPath: m_Name
-      value: SpindleObstacle Variant
+      value: SpindleObstacle
       objectReference: {fileID: 0}
     - target: {fileID: 3850601246179402438, guid: 35e89c6f457fe524aa88cd2cc0e3c525,
         type: 3}
@@ -161,7 +161,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 3be250815c3999b45af243a6a89b24cc, type: 2}
+      objectReference: {fileID: 2100000, guid: 90bee8fa10cbb3d43b41c9a18aa78e8a, type: 2}
     - target: {fileID: 3110354206345069530, guid: 0c12869cd74d20e45bddb67a11e10721,
         type: 3}
       propertyPath: m_LocalPosition.x
