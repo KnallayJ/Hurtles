@@ -47,25 +47,18 @@ public float ForwardsForce;
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey("d") && CanJump == true)
+        if (Input.GetKey("d"))
         {
             rb.AddForce(SidewaysForce * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
         }
-        if(Input.GetKey("a") && CanJump == true)
+        if(Input.GetKey("a"))
         {
             rb.AddForce(-SidewaysForce * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
         }
         if(Input.GetKey("w"))
         {
-
-            
-
-            Debug.Log(ForwardsForce);
-            Debug.Log(SwimForce);
             if(Swimming == true)
             {
-                Debug.Log($"You're swimming! Your Swim Multiplier is {SwimForce}");
-
                 rb.AddForce(0, 0, SwimForce * Time.deltaTime);
             }
             // else if(Flying == true)
@@ -86,7 +79,7 @@ public float ForwardsForce;
         {
             rb.AddForce(0, -ClimbForce * Time.deltaTime, 0);
         }
-        if(Input.GetKey("s") && CanJump == true)
+        if(Input.GetKey("s"))
         {
             if(Swimming == true)
             {
@@ -105,7 +98,7 @@ public float ForwardsForce;
         {
             rb.AddForce(0, JumpForce * Time.deltaTime, 0);
         }
-        if(rb.position.y < .8)
+        if(rb.position.y < -5)
         {
             FindObjectOfType<GameManager>().EndGame();
         }

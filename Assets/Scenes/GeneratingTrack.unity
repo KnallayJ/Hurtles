@@ -121,75 +121,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1001 &23792656
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 6576709244936185825, guid: a3ad1524232ba504d9b9f334f008243b,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6576709244936185825, guid: a3ad1524232ba504d9b9f334f008243b,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6576709244936185825, guid: a3ad1524232ba504d9b9f334f008243b,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6576709244936185825, guid: a3ad1524232ba504d9b9f334f008243b,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6576709244936185825, guid: a3ad1524232ba504d9b9f334f008243b,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6576709244936185825, guid: a3ad1524232ba504d9b9f334f008243b,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6576709244936185825, guid: a3ad1524232ba504d9b9f334f008243b,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6576709244936185825, guid: a3ad1524232ba504d9b9f334f008243b,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 6576709244936185825, guid: a3ad1524232ba504d9b9f334f008243b,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6576709244936185825, guid: a3ad1524232ba504d9b9f334f008243b,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6576709244936185825, guid: a3ad1524232ba504d9b9f334f008243b,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9033926337721541806, guid: a3ad1524232ba504d9b9f334f008243b,
-        type: 3}
-      propertyPath: m_Name
-      value: Player 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: a3ad1524232ba504d9b9f334f008243b, type: 3}
 --- !u!1 &805704807
 GameObject:
   m_ObjectHideFlags: 0
@@ -513,6 +444,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   completeLevelUI: {fileID: 0}
+  Pufferfish: {fileID: 9033926337721541806, guid: a3ad1524232ba504d9b9f334f008243b,
+    type: 3}
+  Cactus: {fileID: 7555296530742152699, guid: 75a7a70cd26e5c44a985a8261d8af668, type: 3}
+  Mushroom: {fileID: 1711730383994887890, guid: c313af6c7c1a4194097d50658ac95fd1,
+    type: 3}
+  Penguin: {fileID: 1211437616169215611, guid: 4f0d5ea59fa24114cba0e9500f272674, type: 3}
+  Pig: {fileID: 6973331248876892724, guid: d6db2742dbcd1b448b5057f7c97cbd4e, type: 3}
+  Plant: {fileID: 8098053800366011016, guid: 0b4fbe3d434d2744383388a90e339ae0, type: 3}
 --- !u!4 &1974569641
 Transform:
   m_ObjectHideFlags: 0
