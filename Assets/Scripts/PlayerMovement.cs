@@ -62,10 +62,6 @@ public float ForwardsForce;
             {
                 rb.AddForce(0, 0, SwimForce * Time.deltaTime);
             }
-            // else if(Flying == true)
-            // {
-            //     rb.AddForce(0, 0, FlightForce * Time.deltaTime);
-            // }
             else
             {
 
@@ -86,10 +82,6 @@ public float ForwardsForce;
             {
                 rb.AddForce(0, 0, -SwimForce * Time.deltaTime);
             }
-            // else if(Flying == true)
-            // {
-            //     rb.AddForce(0, 0, FlightForce * Time.deltaTime);
-            // }
             else
             {
                 rb.AddForce(0, 0, -ForwardsForce * Time.deltaTime);
