@@ -129,7 +129,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 8206135882014043168}
-  offset: {x: 0, y: 1, z: -5}
+  offset: {x: 0, y: 3, z: -7}
 --- !u!1 &9033926337721541806
 GameObject:
   m_ObjectHideFlags: 0
@@ -140,7 +140,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6576709244936185825}
   m_Layer: 0
-  m_Name: Player 1
+  m_Name: Pufferfish
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
