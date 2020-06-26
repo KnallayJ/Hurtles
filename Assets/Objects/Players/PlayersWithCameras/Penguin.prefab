@@ -162,20 +162,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 8890419125362035182}
   offset: {x: 0, y: 1, z: -5}
---- !u!136 &2835481873783953665
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8892532572578114454}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 4.518795
-  m_Height: 9.03759
-  m_Direction: 1
-  m_Center: {x: 0.13554096, y: 3.7382514, z: 0}
 --- !u!54 &7293604122442356361
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -191,7 +177,21 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
+--- !u!136 &2835481873783953665
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8892532572578114454}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 4.518795
+  m_Height: 9.03759
+  m_Direction: 1
+  m_Center: {x: 0.13554096, y: 3.7382514, z: 0}
 --- !u!114 &580525834311617210
 MonoBehaviour:
   m_ObjectHideFlags: 0

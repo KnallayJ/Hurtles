@@ -19,7 +19,6 @@ public class PlayerCollision : MonoBehaviour
         }
         if(collisionInfo.collider.tag == "Water")
         {
-            Debug.Log("You're Swimming!");
             movement.Swimming = true;
             Animator.SetBool("IsSwimming",true);
         }
