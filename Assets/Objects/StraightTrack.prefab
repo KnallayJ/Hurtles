@@ -41,7 +41,6 @@ GameObject:
   - component: {fileID: 3850601246179402438}
   - component: {fileID: 7317021079860147725}
   - component: {fileID: 3287218845088096682}
-  - component: {fileID: 6152711742664445236}
   - component: {fileID: 2041564529}
   m_Layer: 0
   m_Name: StraightTrack
@@ -113,18 +112,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &6152711742664445236
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3568927951925987703}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad18d94399a86eb45945df5af1e924e6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &2041564529
 BoxCollider:
   m_ObjectHideFlags: 0

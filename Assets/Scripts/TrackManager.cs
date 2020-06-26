@@ -5,13 +5,13 @@ using UnityEngine;
 public class TrackManager : MonoBehaviour
 {
 
-    public GameObject straightTrackPrefab;
+    // public GameObject straightTrackPrefab;
 
-    // public GameObject leftTrackPrefab;
+    // public GameObject spindleObstacleTrackPrefab;
 
     // public GameObject rightTrackPrefab;
 
-    // public GameObject[] trackPrefabs;
+    public GameObject[] trackPrefabs;
 
     public GameObject currentTrack;
 
@@ -58,9 +58,9 @@ public class TrackManager : MonoBehaviour
 
     public void SpawnTrack()
     {
-        // int randomIndex = Random.Range(0, 3);
+        int randomIndex = Random.Range(0, 2);
 
-        currentTrack = (GameObject)Instantiate(straightTrackPrefab, currentTrack.transform.GetChild(0).position, Quaternion.identity);
+        currentTrack = (GameObject)Instantiate(trackPrefabs[randomIndex], currentTrack.transform.GetChild(0).position, Quaternion.identity);
     }
 
 }
