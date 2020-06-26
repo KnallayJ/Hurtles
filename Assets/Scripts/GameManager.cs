@@ -9,10 +9,10 @@ public class GameManager : MonoBehaviour
     public GameObject completeLevelUI;
     public GameObject Pufferfish;
     public GameObject Cactus;
-    public GameObject Mushroom;
     public GameObject Penguin;
     public GameObject Pig;
     public GameObject Plant;
+    public GameObject George;
     float Delay = 2f;
     void Start() 
     {
@@ -35,6 +35,10 @@ public class GameManager : MonoBehaviour
         else if (PlayerPrefs.GetString("Character") == "Climber")
         {
             Instantiate(Cactus, new Vector3(0, 1, 0), Quaternion.identity);
+        }
+        else if (PlayerPrefs.GetString("Character") == "George")
+        {
+            Instantiate(George, new Vector3(0, 1, 0), Quaternion.identity);
         }
     }
     // Start is called before the first frame update

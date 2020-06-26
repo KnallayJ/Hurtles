@@ -62,4 +62,14 @@ public class PlayerChooser : MonoBehaviour
         PlayerPrefs.SetString("Character","Swimmer");
         LoadLevel();
     }
+    public void SetGeorge()
+    {
+        PlayerPrefs.SetFloat("Speed", 0.00001f);
+        PlayerPrefs.SetFloat("JumpHeight", 0.5f);
+        PlayerPrefs.SetFloat("ClimbSpeed", 0.5f);
+        PlayerPrefs.SetFloat("SwimSpeed", 2.0f);
+        PlayerPrefs.SetFloat("FlightSpeed", 0f);
+        PlayerPrefs.SetString("Character","George");
+        LoadLevel();
+    }
 }
