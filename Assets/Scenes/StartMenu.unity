@@ -594,7 +594,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Flyer
+  m_Text: 'Cody
 
 '
 --- !u!222 &581311235
@@ -1755,7 +1755,7 @@ GameObject:
   - component: {fileID: 1931222656}
   - component: {fileID: 1931222655}
   m_Layer: 5
-  m_Name: Flyer Button
+  m_Name: Cody Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
