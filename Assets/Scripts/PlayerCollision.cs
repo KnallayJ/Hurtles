@@ -16,6 +16,7 @@ public class PlayerCollision : MonoBehaviour
         if(collisionInfo.collider.tag == "Ground")
         {
             movement.CanJump = true;
+            movement.Flying = false;
         }
         if(collisionInfo.collider.tag == "Water")
         {
@@ -36,6 +37,7 @@ public class PlayerCollision : MonoBehaviour
         if(collisionInfo.collider.tag == "Ground")
         {
             movement.CanJump = false;
+            movement.Flying = true;
         }
         if(collisionInfo.collider.tag == "Wall")
         {

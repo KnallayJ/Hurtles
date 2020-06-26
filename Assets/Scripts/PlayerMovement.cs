@@ -17,6 +17,7 @@ public float ForwardsForce;
     public bool CanClimb;
     public bool Flying;
     public bool Swimming;
+    float RotationAmount;
     // Start is called before the first frame update
     void Start()
     {
@@ -97,6 +98,10 @@ public float ForwardsForce;
         if(Input.GetKey("space") && CanJump == true)
         {
             rb.AddForce(0, JumpForce * Time.deltaTime, 0);
+        }
+        else if(Input.GetKey("space") && Flying == true)
+        {
+            rb.AddForce(0, FlightForce * Time.deltaTime, 0);
         }
         if(rb.position.y < -5)
         {
