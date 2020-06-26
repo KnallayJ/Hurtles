@@ -542,6 +542,10 @@ MonoBehaviour:
   trackPrefabs:
   - {fileID: 3568927951925987703, guid: 35e89c6f457fe524aa88cd2cc0e3c525, type: 3}
   - {fileID: 6849522676718890105, guid: 5d2845a5eb4b7424fb9ed262991d3ec9, type: 3}
+  - {fileID: 6849522676718890105, guid: 73fa378aa3459114ea588c5fa2218dfd, type: 3}
+  - {fileID: 8847108025048943600, guid: b7e8bc95758267c469c6d97703d87e38, type: 3}
+  - {fileID: 3568927951925987703, guid: 0a7768752b46f6d48ba55ad0e1ef528c, type: 3}
+  - {fileID: 3052168494461663033, guid: 1356de504f328b6459bf907c1fabe7a7, type: 3}
   currentTrack: {fileID: 2041564528}
 --- !u!4 &2066344743
 Transform:

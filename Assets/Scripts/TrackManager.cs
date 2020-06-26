@@ -36,7 +36,7 @@ public class TrackManager : MonoBehaviour
     void Start()
     {
 
-        for (int i = 0; i < 50; i++)
+        for (int i = 0; i < 500; i++)
         {
             SpawnTrack();
         }
@@ -58,7 +58,7 @@ public class TrackManager : MonoBehaviour
 
     public void SpawnTrack()
     {
-        int randomIndex = Random.Range(0, 2);
+        int randomIndex = Random.Range(0, 6);
 
         currentTrack = (GameObject)Instantiate(trackPrefabs[randomIndex], currentTrack.transform.GetChild(0).position, Quaternion.identity);
     }
